@@ -10,4 +10,6 @@ export { ReactComponent as VideoIcon } from "./video.svg";
 export { ReactComponent as EditIcon } from "./edit.svg";
 export { ReactComponent as BugIcon } from "./bugFix.svg";
 export { ReactComponent as PlusIcon } from "./plus.svg";
+export { ReactComponent as BlockIcon } from "./block.svg";
+export { ReactComponent as ListIcon } from "./list.svg";
 // export { ReactComponent as  } from "./";

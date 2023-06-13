@@ -12,7 +12,7 @@ function App() {
         <div className="w-[100%] h-16">
           <Header />
         </div>
-        <div className="pl-12 pt-5">
+        <div className="px-12 pt-5">
           <Router>
             <Routes>
               <Route path="/" exact element={<Home />} />
