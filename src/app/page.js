@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { VideoBlockCard, VideoListCard } from "../components";
-import { BlockIcon, ListIcon } from "../assets/icons";
+"use client";
+import { BlockIcon, ListIcon } from "@/assets/icons";
+import { VideoBlockCard, VideoListCard } from "@/components";
+import { useState } from "react";
 
-const Home = () => {
+export default function Home() {
   const [viewBlock, setViewBlock] = useState(true);
-
   return (
     <div className=" flex flex-col gap-3">
       <div className="flex items-center justify-between gap-3 w-[100%]">
@@ -31,14 +31,14 @@ const Home = () => {
             className="p-2 border-2 border-black rounded-bl-md rounded-tl-md cursor-pointer"
             onClick={() => setViewBlock(true)}
           >
-            <BlockIcon className="w-3 h-3 hover:scale-110" />
+            <BlockIcon />
           </div>
           <div
             onClick={() => setViewBlock(false)}
             className="p-2 border-2 border-black rounded-br-md rounded-tr-md
             cursor-pointer"
           >
-            <ListIcon className="w-3 h-3 hover:scale-110" />
+            <ListIcon />
           </div>
         </div>
       </div>
@@ -112,6 +112,4 @@ const Home = () => {
       )}
     </div>
   );
-};
-
-export default Home;
+}
