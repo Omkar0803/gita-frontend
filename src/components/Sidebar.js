@@ -8,15 +8,18 @@ import {
   LogoutIcon,
 } from "@/assets/icons";
 import Image from "next/image";
+import Link from "next/link";
 import JagannathIcon from "@/assets/jagannath.png";
 
 const Sidebar = () => {
   return (
     <div className="fixed  w-[300px] bg-[#1C1917] py-5 text-white h-[100vh]">
-      <div className=" text-amber-600 font-semibold flex text-[1.4rem] justify-start items-center gap-3 ml-7">
-        <LogoIcon />
-        GitaQuest
-      </div>
+      <Link href="/">
+        <div className=" text-amber-600 font-semibold flex text-[1.4rem] justify-start items-center gap-3 ml-7">
+          <LogoIcon />
+          GitaQuest
+        </div>
+      </Link>
       <div className="h-10 px-7 text-right flex items-center justify-end">
         <LeftArrow className="cursor-pointer" />
       </div>
@@ -25,10 +28,12 @@ const Sidebar = () => {
           Lectures
         </h2>
         <ul>
-          <li className="flex items-center gap-3 py-2 px-8 cursor-pointer">
-            <VideoIcon />
-            Videos
-          </li>
+          <Link href="/videos">
+            <li className="flex items-center gap-3 py-2 px-8 cursor-pointer">
+              <VideoIcon />
+              Videos
+            </li>
+          </Link>
           <li className="flex items-center gap-3 py-2 px-8 cursor-pointer">
             <PlaylistIcon /> Playlist
           </li>

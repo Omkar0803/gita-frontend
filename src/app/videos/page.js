@@ -3,10 +3,11 @@ import { useState } from "react";
 import { BlockIcon, ListIcon } from "@/assets/icons";
 import { VideoBlockCard, VideoListCard } from "@/components";
 
-export default function Home() {
+const videos = () => {
   const [viewBlock, setViewBlock] = useState(true);
   return (
-    <div className=" flex flex-col gap-3">
+    <div>
+      <h2 className="mb-2 text-[1.5rem] font-semibold">Videos</h2>
       <div className="flex items-center justify-between gap-3 w-[100%]">
         <div className="flex items-center gap-3 ">
           <input
@@ -42,35 +43,38 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {viewBlock ? (
-        <div className="lectureContainer-Block">
-          <div className="videoContainer">
+        <div className="lectureContainer-Block my-7">
+          <div className="videoContainer mt-4">
             <div className="w-full flex justify-between">
-              <h2 className="mb-2 text-[1.2rem] font-semibold">Videos</h2>
-              <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem] mr-[3rem]">
+              <h2 className="mb-1 text-[1.2rem] font-semibold">Date</h2>
+              <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem]">
                 See all
               </div>
             </div>
-            <div className="videoContainer flex gap-5">
-              <VideoBlockCard />
-              <VideoBlockCard />
-              <VideoBlockCard />
-              <VideoBlockCard />
+            <div className="videoOuterContainer max-w-[1130px] overflow-x-scroll border py-3 px-3 scrollbar-thumb-slate-800 scrollbar-thin">
+              <div className="videoContainer flex gap-2">
+                <VideoBlockCard />
+                <VideoBlockCard />
+                <VideoBlockCard />
+                <VideoBlockCard />
+                <VideoBlockCard />
+              </div>
             </div>
           </div>
-          <div className="PlaylistContainer mt-4">
+          <div className="videoContainer mt-4">
             <div className="w-full flex justify-between">
-              <h2 className="mb-2 text-[1.2rem] font-semibold">Playlist</h2>
-              <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem] mr-[3rem]">
+              <h2 className="   mb-1 text-[1.2rem] font-semibold">Date</h2>
+              <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem]">
                 See all
               </div>
             </div>
-            <div className="videoContainer flex gap-5">
-              <VideoBlockCard />
-              <VideoBlockCard />
-              <VideoBlockCard />
-              <VideoBlockCard />
+            <div className="videoOuterContainer max-w-[1130px] overflow-x-scroll border py-3 px-3 scrollbar-thumb-slate-800 scrollbar-thin">
+              <div className="videoContainer flex gap-5">
+                <VideoBlockCard />
+                <VideoBlockCard />
+                <VideoBlockCard />
+              </div>
             </div>
           </div>
         </div>
@@ -92,24 +96,10 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="videoContainer">
-            <div className="w-full flex justify-between items-center">
-              <h2 className=" text-[1.5rem] font-semibold">Playlist</h2>
-              <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem]">
-                See all
-              </div>
-            </div>
-            <div className="videoOuterContainer flex gap-5 h-[400px] items-start overflow-y-scroll border-2 border-black rounded-lg scrollbar-thumb-slate-800 scrollbar-thin">
-              <div className="videoInnerContainer flex flex-col gap-3 mt-2 ml-2">
-                <VideoListCard />
-                <VideoListCard />
-                <VideoListCard />
-                <VideoListCard />
-              </div>
-            </div>
-          </div>
         </div>
       )}
     </div>
   );
-}
+};
+
+export default videos;
