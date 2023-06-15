@@ -24,9 +24,12 @@ const Video = ({ params }) => {
       <div className=" flex flex-col gap-2">
         <div className="videoListOuterContainer h-[500px] px-2 py-3 border-2 border-black rounded-lg overflow-y-scroll scrollbar-thumb-slate-800 scrollbar-thin">
           <div className="videoList flex flex-col gap-1.5">
-            {videoList.map(() => {
+            {videoList.map((id) => {
               return (
-                <div className="VideoCard w-full flex gap-3 h-[120px] cursor-pointer hover:bg-[#f1f1f1]">
+                <div
+                  key={id}
+                  className="VideoCard w-full flex gap-3 h-[120px] cursor-pointer hover:bg-[#f1f1f1]"
+                >
                   <div className="imgContainer min-w-[180px]  bg-gray-200 rounded-xl h-[120px]"></div>
                   <div className="flex flex-col gap-1 mt-2">
                     <h3 className="text-[1.1rem] font-semibold">

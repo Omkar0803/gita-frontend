@@ -3,7 +3,7 @@ import { useState } from "react";
 import { BlockIcon, ListIcon } from "@/assets/icons";
 import { VideoBlockCard, VideoListCard } from "@/components";
 
-const videos = () => {
+const Videos = () => {
   const [viewBlock, setViewBlock] = useState(true);
   return (
     <div>
@@ -82,7 +82,23 @@ const videos = () => {
         <div className="lectureContainer-list flex flex-col gap-7 mb-16 mt-5">
           <div className="videoContainer">
             <div className="w-full flex justify-between items-center">
-              <h2 className=" text-[1.5rem] font-semibold">Videos</h2>
+              <h2 className="mb-1 text-[1.2rem] font-semibold">Date</h2>
+              <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem]">
+                See all
+              </div>
+            </div>
+            <div className="videoOuterContainer flex gap-5 h-[400px] items-start overflow-y-scroll border-2 border-black rounded-lg  scrollbar-thumb-slate-800 scrollbar-thin">
+              <div className="videoInnerContainer flex flex-col gap-3 mt-2 mx-2 ">
+                <VideoListCard />
+                <VideoListCard />
+                <VideoListCard />
+                <VideoListCard />
+              </div>
+            </div>
+          </div>
+          <div className="videoContainer">
+            <div className="w-full flex justify-between items-center">
+              <h2 className="mb-1 text-[1.2rem] font-semibold">Date</h2>
               <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem]">
                 See all
               </div>
@@ -102,4 +118,4 @@ const videos = () => {
   );
 };
 
-export default videos;
+export default Videos;

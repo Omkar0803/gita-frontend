@@ -7,7 +7,7 @@ const VideoBlockCard = () => {
       <div className="min-w-[260px] flex flex-col gap-1 cursor-pointer">
         <div className="imgContainer w-full bg-gray-200 rounded-xl h-[180px]"></div>
         <div>
-          <h3>Title Lorem Ipsum lopsna </h3>
+          <h3 className="font-semibold">Title Lorem Ipsum lopsna </h3>
           <p className="text-[0.9rem]">author</p>
         </div>
       </div>

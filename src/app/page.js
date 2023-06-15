@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { BlockIcon, ListIcon } from "@/assets/icons";
 import { VideoBlockCard, VideoListCard } from "@/components";
+import Link from "next/link";
 
 export default function Home() {
   const [viewBlock, setViewBlock] = useState(true);
@@ -48,9 +49,11 @@ export default function Home() {
           <div className="videoContainer">
             <div className="w-full flex justify-between">
               <h2 className="mb-2 text-[1.2rem] font-semibold">Videos</h2>
-              <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem] mr-[3rem]">
-                See all
-              </div>
+              <Link href={`/videos`}>
+                <div className="font-semibold underline hover:text-blue-800 cursor-pointer text-[0.9rem] mr-[3rem]">
+                  See all
+                </div>
+              </Link>
             </div>
             <div className="videoContainer flex gap-5">
               <VideoBlockCard />
