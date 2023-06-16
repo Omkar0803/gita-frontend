@@ -1,10 +1,30 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BlockIcon, ListIcon } from "@/assets/icons";
 import { VideoBlockCard, VideoListCard } from "@/components";
+import supabase from "@/config/supabase";
 
 const Videos = () => {
   const [viewBlock, setViewBlock] = useState(true);
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    const fetchVideos = async () => {
+      const { data, error } = await supabase
+        .from("Videos") // Name of Table
+        .select(`*,Facilitators(*)`);
+
+      if (error) {
+        console.log("error");
+        console.log(error);
+      }
+      if (data) {
+        // console.log(data);
+        await setVideos(data);
+      }
+    };
+    fetchVideos();
+  }, []);
   return (
     <div>
       <h2 className="mb-2 text-[1.5rem] font-semibold">Videos</h2>
@@ -54,11 +74,13 @@ const Videos = () => {
             </div>
             <div className="videoOuterContainer max-w-[1130px] overflow-x-scroll border py-3 px-3 scrollbar-thumb-slate-800 scrollbar-thin">
               <div className="videoContainer flex gap-2">
-                <VideoBlockCard />
-                <VideoBlockCard />
-                <VideoBlockCard />
-                <VideoBlockCard />
-                <VideoBlockCard />
+                {videos ? (
+                  videos.map((data) => {
+                    return <VideoBlockCard data={data} key={data.link} />;
+                  })
+                ) : (
+                  <div></div>
+                )}
               </div>
             </div>
           </div>

@@ -10,7 +10,7 @@ const Video = ({ params }) => {
           <iframe
             width="100%"
             height="100%"
-            src={`https://www.youtube.com/embed/${"wS7wz14Q4Yg"}`}
+            src={`https://www.youtube.com/embed/${"Y7HiGXgAY1Y"}`}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
