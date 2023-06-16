@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-const VideoBlockCard = ({ data }) => {
+const PlaylistBlockCard = ({ data }) => {
+  console.log(data);
   return (
     <Link href={`/video/${data ? data.link : "1"}`}>
       <div className="min-w-[260px] flex flex-col gap-1 cursor-pointer">
@@ -14,14 +15,12 @@ const VideoBlockCard = ({ data }) => {
         </div>
         <div>
           <h3 className="font-semibold">
-            {data ? data.title.slice(0, 30) + "..." : "Title"}
-            {/* {title.slice(0, 7)}...
-            {title.slice(account.length - 4)} */}
+            {data && data.title ? data.title.slice(0, 30) + "..." : "Title"}
           </h3>
           <p className="text-[0.9rem] font-medium">
-            {data
+            {/* {data
               ? `${data.Facilitators.prefix} ${data.Facilitators.name} ${data.Facilitators.suffix}`
-              : "Author"}
+              : "Author"} */}
           </p>
         </div>
       </div>
@@ -29,4 +28,4 @@ const VideoBlockCard = ({ data }) => {
   );
 };
 
-export default VideoBlockCard;
+export default PlaylistBlockCard;

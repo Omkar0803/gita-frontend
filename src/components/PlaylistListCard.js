@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const VideoListCard = ({ data }) => {
+const PlaylistListCard = ({ data }) => {
   return (
     <Link href={`/video/${data ? data.link : "1"}`}>
       <div className="w-full flex gap-3 h-[120px]">
@@ -14,12 +14,12 @@ const VideoListCard = ({ data }) => {
         </div>
         <div className="flex flex-col gap-1">
           <h3 className="text-[1.4rem] font-semibold">
-            {data ? data.title.slice(0, 30) + "..." : "Title"}
+            {data && data.title ? data.title.slice(0, 30) + "..." : "Title"}
           </h3>
           <p className="">
-            {data
+            {/* {data
               ? `${data.Facilitators.prefix} ${data.Facilitators.name} ${data.Facilitators.suffix}`
-              : "Author"}
+              : "Author"} */}
           </p>
           <p className="text-[0.95rem] text-gray-800">
             Missing a single dose of diabetes medicine is not usually a problem.
@@ -32,4 +32,4 @@ const VideoListCard = ({ data }) => {
   );
 };
 
-export default VideoListCard;
+export default PlaylistListCard;

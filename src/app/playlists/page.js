@@ -27,7 +27,7 @@ const Videos = () => {
   }, []);
   return (
     <div>
-      <h2 className="mb-2 text-[1.5rem] font-semibold">Videos</h2>
+      <h2 className="mb-2 text-[1.5rem] font-semibold">Playlists</h2>
       <div className="flex items-center justify-between gap-3 w-[100%]">
         <div className="flex items-center gap-3 ">
           <input

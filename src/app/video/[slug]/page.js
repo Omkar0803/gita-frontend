@@ -25,7 +25,7 @@ const Video = ({ params }) => {
       }
     };
     fetchVideo();
-  }, []);
+  }, [params.slug]);
   return (
     <div className=" flex gap-3 my-5">
       <div className=" max-w-[750px]">
