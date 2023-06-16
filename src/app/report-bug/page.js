@@ -3,7 +3,7 @@ import { SearchIcon } from "@/assets/icons";
 const page = () => {
   return (
     <div>
-      <h2 className="text-[1.5rem] font-semibold">Edit Request</h2>
+      <h2 className="text-[1.5rem] font-semibold">Report Bug</h2>
       <div className="flex flex-col items-center gap-5 my-10">
         <div className="flex flex-col items-start gap-1 ">
           <label htmlFor="search" className="font-semibold">
