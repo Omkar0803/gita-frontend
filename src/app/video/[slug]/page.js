@@ -1,10 +1,21 @@
 const videoList = [1, 2, 3, 4, 5, 6, 7];
 
+// `https://img.youtube.com/vi/${linkId}/sddefault.jpg`;
+
 const Video = ({ params }) => {
   return (
     <div className=" flex gap-3 my-5">
       <div className=" max-w-[750px]">
-        <div className="videoBox h-[500px] w-[750px] bg-[#8c7979] rounded-2xl"></div>
+        <div className="videoBox h-[500px] w-[750px] bg-[#8c7979] rounded-2xl overflow-hidden">
+          <iframe
+            width="100%"
+            height="100%"
+            src={`https://www.youtube.com/embed/${"wS7wz14Q4Yg"}`}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          ></iframe>
+        </div>
         <div className="videoDetails my-3 flex flex-col gap-2">
           <h2 className="title text-[1.5rem] font-semibold">{params.slug}</h2>
           <div>

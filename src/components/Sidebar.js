@@ -44,10 +44,12 @@ const Sidebar = () => {
           Feedback
         </h2>
         <ul>
-          <li className="flex items-center gap-3 py-2 px-8 cursor-pointer">
-            <EditIcon />
-            Edit request
-          </li>
+          <Link href="/edit">
+            <li className="flex items-center gap-3 py-2 px-8 cursor-pointer">
+              <EditIcon />
+              Edit request
+            </li>
+          </Link>
           <li className="flex items-center gap-3 py-2 px-8 cursor-pointer">
             <BugIcon />
             Report bugs
