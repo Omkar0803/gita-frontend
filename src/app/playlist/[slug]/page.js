@@ -52,14 +52,14 @@ const Video = ({ params }) => {
         </div>
       </div>
       <div className=" flex flex-col gap-2">
-        <div className="flex gap-1.5">
+        {/* <div className="flex gap-1.5">
           <button className="border-2 border-black h-12 rounded-md py-2 w-[100%] text-[1rem] font-medium">
-            Sort Filter
+            Sort by Speaker
           </button>
           <button className="border-2 border-black h-12 rounded-md py-2 w-[100%] text-[1rem] font-medium">
             Sort By date
           </button>
-        </div>
+        </div> */}
         <div className="videoListOuterContainer h-[500px] px-2 py-3 border-2 border-black rounded-lg overflow-y-scroll scrollbar-thumb-slate-800 scrollbar-thin">
           <div className="videoList flex flex-col gap-1.5">
             {videoList.map((id) => {

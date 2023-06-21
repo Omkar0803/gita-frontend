@@ -10,4 +10,5 @@ export { default as Profile } from "./Profile";
 export { default as LogoIcon } from "./LogoIcon";
 export { default as LogoutIcon } from "./LogoutIcon";
 export { default as SearchIcon } from "./SearchIcon";
+export { default as DeleteIcon } from "./DeleteIcon";
 // export { default as  } from "./";

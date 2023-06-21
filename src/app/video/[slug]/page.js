@@ -54,7 +54,7 @@ const Video = ({ params }) => {
       <div className=" flex flex-col gap-2">
         <div className="flex gap-1.5">
           <button className="border-2 border-black h-12 rounded-md py-2 w-[100%] text-[1rem] font-medium">
-            Sort Filter
+            Sort by Speaker
           </button>
           <button className="border-2 border-black h-12 rounded-md py-2 w-[100%] text-[1rem] font-medium">
             Sort By date
