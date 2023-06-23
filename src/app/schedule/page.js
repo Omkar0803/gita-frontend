@@ -42,11 +42,18 @@ const page = () => {
     });
     setCourseList(newCourselist);
   };
-
   return (
     <div>
       <h2 className="text-[1.5rem] font-semibold">Upload Video</h2>
       <div className="flex flex-col items-center gap-5 my-10">
+        <div className="flex flex-col gap-1">
+          <label className="font-semibold">Email</label>
+          <input
+            type="email"
+            required
+            className="border border-gray-700 rounded px-2 py-2 w-[600px]"
+          ></input>
+        </div>
         <div className="flex flex-col gap-1">
           <label className="font-semibold">Batch Name</label>
           <select
@@ -97,42 +104,44 @@ const page = () => {
           ></input>
         </div>
         <div className="flex flex-col gap-1">
-          <label className="font-semibold">Video Title</label>
+          <label className="font-semibold">Title of Lecture</label>
           <input
             type="text"
             required
             className="border border-gray-700 rounded px-2 py-2 w-[600px]"
           ></input>
         </div>
-        {/* <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1">
           <label className="font-semibold">Reason for Lecture</label>
+          <textarea className="border border-gray-700 rounded px-2 py-2 w-[600px] h-24"></textarea>
+        </div>
+        <div className="flex flex-col w-[600px]">
+          <div className="flex flex-col gap-1">
+            <label className="font-semibold">Date and Time</label>
+            <input
+              type="datetime-local"
+              required
+              className="border border-gray-700 rounded px-2 py-2 w-[200px]"
+            ></input>
+          </div>
+        </div>
+        <div className="flex flex-col gap-1">
+          <label className="font-semibold">Lecture Type</label>
           <input
             type="text"
             required
             className="border border-gray-700 rounded px-2 py-2 w-[600px]"
           ></input>
-        </div> */}
-        <div className="flex flex-col gap-1">
+        </div>
+
+        {/* <div className="flex flex-col gap-1">
           <label className="font-semibold">Video File</label>
           <input
             type="file"
             required
             className="border border-gray-700 rounded px-2 py-2 w-[600px]"
           ></input>
-        </div>
-
-        <div className="flex flex-col gap-1">
-          <label className="font-semibold">Description</label>
-          <textarea className="border border-gray-700 rounded px-2 py-2 w-[600px] h-24"></textarea>
-        </div>
-        <div className="flex flex-col gap-1">
-          <label className="font-semibold">Email</label>
-          <input
-            type="email"
-            required
-            className="border border-gray-700 rounded px-2 py-2 w-[600px]"
-          ></input>
-        </div>
+        </div> */}
         <button className="w-[150px] mt-7 items-center gap-2 py-2.5 text-white bg-amber-600 rounded-lg hover:bg-amber-700">
           Submit
         </button>
